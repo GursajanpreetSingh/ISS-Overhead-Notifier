@@ -17,7 +17,6 @@ def is_iss_overhead():
     iss_latitude = float(data["iss_position"]["latitude"])
     iss_longitude = float(data["iss_position"]["longitude"])
 
-    #Your position is within +5 or -5 degrees of the ISS position.
 
     if MY_LAT-5 <= iss_latitude <= MY_LAT+5 and MY_LONG-5 <= iss_longitude <= MY_LONG+5:
         return True
@@ -40,8 +39,7 @@ def is_night():
     if time_now >= sunset or time_now <= sunrise:
         return True
 
-#If the ISS is close to my current position
-# and it is currently dark
+
 while True:
     time.sleep(60)
     if is_iss_overhead() and is_night():
@@ -51,8 +49,9 @@ while True:
             connection.login(user=MY_EMAIL, password=MY_PASSWORD)
             connection.sendmail(from_addr=MY_EMAIL,
                                 to_addrs=MY_EMAIL,
-                                msg="Subject:Look Up\n\nThe ISS is above you in the sky.Look Up!")
-# BONUS: run the code every 60 seconds.
+                                msg="Subject:Look Up\n\nHey\nThe International Space Station is currently flying right above you, and it's dark enough to see it.\n"
+                                    "Step outside and look up—you might just spot a spaceship orbiting Earth!Happy Stargazing! 🌌👨‍🚀")
+
 
 
 
