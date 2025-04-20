@@ -49,8 +49,7 @@ while True:
             connection.login(user=MY_EMAIL, password=MY_PASSWORD)
             connection.sendmail(from_addr=MY_EMAIL,
                                 to_addrs=MY_EMAIL,
-                                msg="Subject:Look Up\n\nHey\nThe International Space Station is currently flying right above you, and it's dark enough to see it.\n"
-                                    "Step outside and look up—you might just spot a spaceship orbiting Earth!Happy Stargazing! 🌌👨‍🚀")
+                               msg="Subject:Look Up\n\nThe ISS is above you in the sky.Look Up!Happy Stargazing!")
 
 
 
